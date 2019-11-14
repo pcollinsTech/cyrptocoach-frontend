@@ -19,8 +19,9 @@ import {
   FILTER_BY_COUNTRIES,
   FILTER_BY_PAYMENTS
 } from "../types";
-import sortExchange from "./sortExchange";
+import sortExchange from "../post/sortExchange";
 import { exchangeData, cryptoData } from "./data";
+import { contriesData, fiatsData, paymentsData } from "./countries";
 
 function removeDuplicates(myArr, prop) {
   return myArr.filter((obj, pos, arr) => {
@@ -80,11 +81,11 @@ const ExchangeState = props => {
   };
   const getCountries = async () => {
     setLoading();
-    const res = await axios.get(`http://api.crypto.local/api/countries`);
-    setCountries(res.data);
+    // const res = await axios.get(`http://api.crypto.local/api/countries`);
+    setCountries(contriesData);
     dispatch({
       type: GET_COUNTRIES,
-      payload: res.data
+      payload: contriesData
     });
   };
   const setCountries = data => {
@@ -98,11 +99,11 @@ const ExchangeState = props => {
   };
   const getPayments = async () => {
     setLoading();
-    const res = await axios.get(`http://api.crypto.local/api/payments`);
-    setPayments(res.data);
+    // const res = await axios.get(`http://api.crypto.local/api/payments`);
+    setPayments(paymentsData);
     dispatch({
       type: GET_PAYMENTS,
-      payload: res.data
+      payload: paymentsData
     });
   };
   const setPayments = data => {
@@ -116,11 +117,11 @@ const ExchangeState = props => {
   };
   const getFiats = async () => {
     setLoading();
-    const res = await axios.get(`http://api.crypto.local/api/fiats`);
-    setFiats(res.data);
+    // const res = await axios.get(`http://api.crypto.local/api/fiats`);
+    setFiats(fiatsData);
     dispatch({
       type: GET_FIATS,
-      payload: res.data
+      payload: fiatsData
     });
   };
   const setFiats = data => {
