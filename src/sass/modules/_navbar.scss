@@ -1,0 +1,29 @@
+.main__nav {
+    // background: $white;
+    color: $white;
+    border-bottom: 1px solid #ccc;
+    a {
+        color: $black;
+    }
+    .btn-secondary {
+        background-color: $white;
+        border-color: $white;
+        color: $black;
+    }
+}
+
+.btn {
+    margin: 0 7px;
+    border-radius: 10px;
+}
+.btn a {
+    color: white;
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.not-home {
+    margin-top: 100px;
+}
