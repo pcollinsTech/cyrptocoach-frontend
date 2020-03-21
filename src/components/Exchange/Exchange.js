@@ -8,7 +8,7 @@ import Icofont from "react-icofont";
 const Exchange = props => {
   const exchangeContext = useContext(ExchangeContext);
 
-  const { exchanges, getExchanges } = exchangeContext;
+  const { getExchanges } = exchangeContext;
   useEffect(() => {
     getExchanges();
     // eslint-disable-next-line react-hooks/exhaustive-deps

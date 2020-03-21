@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import axios from "axios";
+// import axios from "axios";
 import ExchangeContext from "./exchangeContext";
 import ExchangeReducer from "./ExchangeReducer";
 import {
@@ -15,11 +15,9 @@ import {
   SET_FIAT_OPTIONS,
   SET_SEARCHED_EXCHANGES,
   FILTER_BY_CRYPTOS,
-  FILTER_BY_FIATS,
-  FILTER_BY_COUNTRIES,
-  FILTER_BY_PAYMENTS
+  FILTER_BY_COUNTRIES
 } from "../types";
-import sortExchange from "../post/sortExchange";
+import sortExchange from "./sortExchange";
 import { exchangeData, cryptoData } from "./data";
 import { contriesData, fiatsData, paymentsData } from "./countries";
 
@@ -287,6 +285,7 @@ const ExchangeState = props => {
         getCryptos,
         getCountries,
         getPayments,
+        setCryptos,
         filterByCryptos,
         filterByFiats,
         filterByPayments,

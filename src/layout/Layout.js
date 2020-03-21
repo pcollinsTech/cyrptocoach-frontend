@@ -8,6 +8,7 @@ const Layout = ({ props, children }) => {
   return (
     <Fragment>
       <MainNav router={props} />
+
       {/* <div className="container" style={{ marginTop: "80px" }}> */}
       <div className={location.pathname !== "/" ? "not-home" : ""}>{children}</div>
       {/* </div> */}

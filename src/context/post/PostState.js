@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import axios from "axios";
+// import axios from "axios";
 import PostContext from "./postContext";
 import PostReducer from "./PostReducer";
 import { GET_POSTS, GET_POST, SET_LOADING } from "../types";
@@ -26,7 +26,7 @@ const PostState = props => {
   const getPost = async id => {
     setLoading();
     // const res = await axios.get(`http://api.crypto.local/api/post/${slug}`);
-    const post = postData.filter(post => post.id == id);
+    const post = postData.filter(post => post.id === id);
     dispatch({
       type: GET_POST,
       payload: post
